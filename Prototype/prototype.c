@@ -3,8 +3,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-bool isDelimiter(char ch)
-{
+bool isDelimiter(char ch) {
+	
 	if (ch == ' ' || ch == '+' || ch == '-' || ch == '*' ||
 		ch == '/' || ch == ',' || ch == ';' || ch == '>' ||
 		ch == '<' || ch == '=' || ch == '(' || ch == ')' ||
@@ -13,8 +13,8 @@ bool isDelimiter(char ch)
 	return (false);
 }
 
-bool isOperator(char ch)
-{
+bool isOperator(char ch) {
+	
 	if (ch == '+' || ch == '-' || ch == '*' ||
 		ch == '/' || ch == '>' || ch == '<' ||
 		ch == '=')
@@ -22,8 +22,8 @@ bool isOperator(char ch)
 	return (false);
 }
 
-bool validIdentifier(char* str)
-{
+bool validIdentifier(char* str) {
+	
 	if (str[0] == '0' || str[0] == '1' || str[0] == '2' ||
 		str[0] == '3' || str[0] == '4' || str[0] == '5' ||
 		str[0] == '6' || str[0] == '7' || str[0] == '8' ||
@@ -32,8 +32,8 @@ bool validIdentifier(char* str)
 	return (true);
 }
 
-bool isKeyword(char* str)
-{
+bool isKeyword(char* str) {
+	
 	if (!strcmp(str, "if") || !strcmp(str, "else") ||
 		!strcmp(str, "while") || !strcmp(str, "do") ||
 		!strcmp(str, "break") ||
@@ -50,8 +50,8 @@ bool isKeyword(char* str)
 	return (false);
 }
 
-bool isInteger(char* str)
-{
+bool isInteger(char* str) {
+	
 	int i, len = strlen(str);
 
 	if (len == 0)
@@ -66,8 +66,8 @@ bool isInteger(char* str)
 	return (true);
 }
 
-bool isRealNumber(char* str)
-{
+bool isRealNumber(char* str) {
+	
 	int i, len = strlen(str);
 	bool hasDecimal = false;
 
@@ -86,8 +86,8 @@ bool isRealNumber(char* str)
 	return (hasDecimal);
 }
 
-char* subString(char* str, int left, int right)
-{
+char* subString(char* str, int left, int right) {
+	
 	int i;
 	char* subStr = (char*)malloc(
 				sizeof(char) * (right - left + 2));
@@ -98,8 +98,8 @@ char* subString(char* str, int left, int right)
 	return (subStr);
 }
 
-void parse(char* str)
-{
+void parse(char* str) {
+	
 	int left = 0, right = 0;
 	int len = strlen(str);
 
@@ -139,8 +139,7 @@ void parse(char* str)
 	return;
 }
 
-int main()
-{
+int main() {
 
 	char str[100] = "int a = b + 1c; ";
 
