@@ -1,10 +1,10 @@
 package lexico;
 
 public class Token {
+
 	private TipoToken token;
 	private String lexema;
 	private int linha;
-	
 	
 	public Token(TipoToken token, String lexema, int linha) {
 		super();
@@ -33,8 +33,6 @@ public class Token {
 	@Override
 	public String toString() {
 		return "Token [token=" + token + ", lexema=" + lexema + ", linha=" + linha + "]";
-	}
-	
-	
+	}	
 	
 }
