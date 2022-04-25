@@ -31,29 +31,29 @@ public class Analisador {
         this.posicaoLinha = 0;
     }
     public char getChar() {
-    	if(linha==null) return 0;//caso a primeira linha lida ao abrir o arquivo seja nula
-    	if(posicaoLinha == linha.length()) {//se já leu todos os caracteres
+    	if(linha==null) return 0;
+    	if(posicaoLinha == linha.length()) {
     		try {
-				linha = arquivo.readLine();//busca-se uma nova linha
+				linha = arquivo.readLine();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-    		if(linha == null)//final do arquivo
+    		if(linha == null)
     		{
                 numeroLinha++;
                 return 0;
             }
-    		else {//tem linha nova
+    		else {
     			linha = linha.concat("\n");
                 numeroLinha++;
                 posicaoLinha = 0;
     		}
     	}
-    	char ch = linha.charAt(posicaoLinha);//ler o primeiro caracter
-        posicaoLinha++;//incrementa a posição
-        return ch;//retorna esse caracter
+    	char ch = linha.charAt(posicaoLinha);
+        posicaoLinha++;
+        return ch;
     }
-    public boolean proximoChar(char c) {//compara um caracter recebido com o próximo a ser lido
+    public boolean proximoChar(char c) {
     	char proximo = getChar();
     	return c==proximo;
     }
@@ -63,7 +63,7 @@ public class Analisador {
     	Automato automato = Automato.OPERADOR;
     	String lexema = "";
     	char c;
-    	while(token == null)//o processo garante o encontro de um token, nem que este seja EOF
+    	while(token == null)
         {
             switch(automato)
             {
@@ -75,7 +75,7 @@ public class Analisador {
 	                    		if(proximoChar('=')) 
 	                    			token = new Token(TipoToken.OPMAIORIGUAL, ">=", numeroLinha);
 	                    		else{
-	                    			posicaoLinha--;//retorna o caracter por conta do metodo proximo char
+	                    			posicaoLinha--;
 	                    			token = new Token(TipoToken.OPMAIOR, ">", numeroLinha);
 	                    		}
 	                    	}break;
@@ -83,7 +83,7 @@ public class Analisador {
 	                    	if(proximoChar('=')) 
                     			token = new Token(TipoToken.OPMENORIGUAL, "<=", numeroLinha);
                     		else{
-                    			posicaoLinha--;//retornar um caracter de leitura por conta do metodo proximo char
+                    			posicaoLinha--;
                     			token = new Token(TipoToken.OPMENOR, "<", numeroLinha);
                     		}
 	                    }break;
@@ -103,21 +103,21 @@ public class Analisador {
                     }break;//switch caracter
                 case IDENTIFICADOR:
                 	c = getChar();
-                	if(Simbolos.verificaSimbolo(c)) {//verifica se é um lexema já pronto
+                	if(Simbolos.verificaSimbolo(c)) {
                 		switch (lexema) {
 						case "int": {
 							token = new Token(TipoToken.IDTIPO, lexema, numeroLinha);
 						}break;
 						default:
 							token = new Token(TipoToken.IDVAR, lexema, numeroLinha);
-						}//switch lexema
-                	}//if
+						}
+                	}
                 	else {
                 		if(Character.isLetter(c) || c == '_')
                 			lexema +=c;
                 	}
-            }//switch autômato
-        }//while
+            }
+        }
     	return token;
     }
     public static void main(String[] args) {
@@ -138,7 +138,3 @@ public class Analisador {
 		
 	}
 }
-
-	    
-
-
