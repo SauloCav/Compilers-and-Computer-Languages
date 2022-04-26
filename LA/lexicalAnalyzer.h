@@ -11,7 +11,7 @@
 #include <string>
 #include <iostream>
 
-enum token { 
+enum TipoToken { 
   SCOPE_CONSTRUCTOR,
   KEYWORD,
   VALID_IDENTIFIER,
@@ -40,4 +40,3 @@ bool isRealNumber(char* str);
 char* subString(char* str, int left, int right);
 
 void parse(char* str);
-
