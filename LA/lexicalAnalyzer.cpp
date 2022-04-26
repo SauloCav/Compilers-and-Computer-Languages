@@ -3,7 +3,7 @@
 bool isDelimiter(char ch) {
 	
 	if (ch == ' ' || ch == ',' || ch == ';' || ch == '(' || ch == ')' || ch == '[' || ch == ']' || ch == '{' || ch == '}'){
-			return (true);
+		return (true);
 	}
 	return (false);	
 	
