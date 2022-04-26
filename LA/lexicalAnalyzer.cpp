@@ -9,12 +9,6 @@ bool isDelimiter(char ch) {
 	
 }
 
-bool isComment(char* str) {
-	
-	return false;
-	
-}
-
 bool isScopeConstruction(char* str) {
 	
 	if (!strcmp(str, "begin") || !strcmp(str, "end")){
