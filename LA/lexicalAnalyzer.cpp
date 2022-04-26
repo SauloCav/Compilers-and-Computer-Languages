@@ -39,7 +39,7 @@ bool isArithmeticOperator(char* str) {
 
 bool isRelationalOperator(char* str) {
 	
-	if (!strcmp(str, "<") || !strcmp(str, ">") || !strcmp(str, "==") || !strcmp(str, "!=") || !strcmp(str, "!=") 
+	if (!strcmp(str, "<") || !strcmp(str, ">") || !strcmp(str, "==") || !strcmp(str, "!=") 
 		|| !strcmp(str, ">=") || !strcmp(str, "===") || !strcmp(str, "!==")){
 			return (true);
 	}	
