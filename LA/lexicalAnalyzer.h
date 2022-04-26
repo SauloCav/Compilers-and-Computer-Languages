@@ -11,6 +11,21 @@
 #include <string>
 #include <iostream>
 
+enum token { 
+  OPERATOR_LOGIC, 
+  OPERATOR_ARITHMETIC, 
+  OPERATOR_RELATIONAL, 
+  ASSIGNMENT_COMMAND, 
+  SCOPE_CONSTRUCTOR, 
+  DATA_TYPE_BOOLEAN,
+  DATA_TYPE_STRING, 
+  DATA_TYPE_INTEGER, 
+  DATA_TYPE_REAL_NUMBER,
+  KEYWORD,
+  VALID_TERMINAL,
+  NOT_VALID_TERMINAL
+};
+
 bool isDelimiter(char ch);
 bool isOperator(char ch);
 bool validIdentifier(char* str);
