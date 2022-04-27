@@ -49,9 +49,7 @@ bool isRelationalOperator(char* str) {
 
 bool isAssignmentCommand(char* str) {
 	
-	if (!strcmp(str, "=") || !strcmp(str, "+=") || !strcmp(str, "-=") || !strcmp(str, "*=") || !strcmp(str, "/=") 
-		|| !strcmp(str, "%=") || !strcmp(str, "**=") || !strcmp(str, "<<=") || !strcmp(str, ">>=")
-		|| !strcmp(str, ">>>=") || !strcmp(str, "&=") || !strcmp(str, "^=") || !strcmp(str, "|=")){
+	if (!strcmp(str, "=") || !strcmp(str, "+=") || !strcmp(str, "-=") || !strcmp(str, "*=") || !strcmp(str, "/=")){
 		return (true);
 	}
 	return (false);
