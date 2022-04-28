@@ -30,6 +30,16 @@ enum TipoToken {
   DATA_TYPE_REAL_NUMBER,
 };
 
+
+enum TipoToken { 
+  KEYWORD,
+  DELIMITER,
+  OPERATOR_ARITHMETIC,
+  OPERATOR_RELATIONAL,
+  LOGIC_EXPRESSION,
+  ARITHMETIC_EXPRESSION,
+  RELATIONAL_EXPRESSION,
+  
 bool isDelimiter(char ch);
 bool isOperator(char ch);
 bool validIdentifier(char* str);
