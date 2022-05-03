@@ -2,8 +2,6 @@
 #include<string.h>
 #include<locale.h>
 #include<stdlib.h>
-#include<time.h>
-#include<iostream>
 #include<windows.h>
 #include<stdbool.h>
 #include<algorithm>
