@@ -3,15 +3,10 @@ package lexico;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-/**
- * 
- * Este analisador faz uso de elementos do projeto de arthurmteodoro (ano 2017) 
- * e notas de aula do Prof. Andrei Formiga (ano 2010)
- *
- */
+
 public class Analisador {
 
-		private BufferedReader arquivo;
+	    private BufferedReader arquivo;
 	    private String arquivoNome;
 	    private String linha;
 	    private int numeroLinha;
@@ -100,7 +95,7 @@ public class Analisador {
 	                    			lexema +=c;
 	                    		}
 	                    }break;
-                    }break;//switch caracter
+                    }break;
                 case IDENTIFICADOR:
                 	c = getChar();
                 	if(Simbolos.verificaSimbolo(c)) {
