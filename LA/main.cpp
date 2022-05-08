@@ -2,7 +2,7 @@
 
 int main() {
 
-	char str[LEN_ARRAY] = " int main () \n begin \n int x = 1; \n int y = 3; \n int z = 6; \n @this is a comment@ \n bool a = false; b = true; x < y \n end ";
+	char str[LEN_ARRAY] = "  ";
 	TokenCol* col = createCollection(100);
 	
 	printf("\nInput:\n");
