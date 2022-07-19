@@ -1,7 +1,6 @@
 package sintatico;
 
 import java.io.IOException;
-
 import lexico.*;
 
 public class Sintatico {
@@ -18,23 +17,21 @@ public class Sintatico {
 		P();
 		E();
 		consumir(TipoToken.EOF);
-		System.out.println("An·lise Finalizada");
+		System.out.println("An√°lise Finalizada");
 	}
 
 	private void P() {
-		
 		consumir(TipoToken.IDTIPO);
 		consumir(TipoToken.IDVAR);
 	}
 
 	private void E() {
-		//if(lookahed.getToken() == TipoToken.IDVAR || lookahed.getToken() == TipoToken.OPIGUAL) {
-			consumir(TipoToken.IDVAR);
-			if(lookahed.getToken() == TipoToken.OPIGUAL)
-					Operadores();
-			if(lookahed.getToken() == TipoToken.EOF);
-			else	erro();
-		}
+		consumir(TipoToken.IDVAR);
+		if(lookahed.getToken() == TipoToken.OPIGUAL)
+			Operadores();
+		if(lookahed.getToken() == TipoToken.EOF);
+		else	erro();
+	}
 		
 	
 
@@ -53,7 +50,6 @@ public class Sintatico {
 			System.err.println("Erro na linha "+lookahed.getLinha());
 			System.err.println("Esperava "+lookahed.getToken());
 		}
-		
 	}
 	
 	private void erro() {
@@ -64,4 +60,5 @@ public class Sintatico {
 		Sintatico sintatico = new Sintatico("teste.txt");
 		sintatico.analise();
 	}
+	
 }
