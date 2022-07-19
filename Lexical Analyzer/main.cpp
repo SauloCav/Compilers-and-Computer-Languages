@@ -2,7 +2,7 @@
 
 int main() {
 
-	char str[LEN_ARRAY] = "  ";
+	char str[LEN_ARRAY] = " int main ()  begin end ";
 	TokenCol* col = createCollection(100);
 	
 	printf("\nInput:\n");
@@ -13,8 +13,6 @@ int main() {
 	if((hasError(str)) == false){
 		tokenizer(str, col);
 	}
-	
-	//printCollection(col);
 
 }
 
