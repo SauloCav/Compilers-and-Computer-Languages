@@ -8,7 +8,7 @@ Lexical analysis is the extraction of individual words or lexemes from an input 
 
 If we consider a statement in a programming language, we need to be able to recognise the small syntactic units (tokens) and pass this information to the parser. We need to also store the various attributes in the symbol or literal tables for later use, e.g., if we have an variable, the tokeniser would generate the token var and then associate the name of the variable with it in the symbol table - in this case, the variable name is the lexeme.
 
-Other roles of the lexical analyser include the removal of whitespace and comments and handling compiler directives (i.e., as a preprocessor).
+Other roles of the lexical analyser include the removal of whitespace and comments and handling compiler directives.
 
 The tokenisation process takes input and then passes this input through a keyword recogniser, an identifier recogniser, a numeric constant recogniser and a string constant recogniser, each being put in to their own output based on disambiguating rules.
 
