@@ -28,3 +28,14 @@ There are many techniques for parsing algorithms (vs FSA-centred lexical analysi
 Context-free grammars can be represented using Backus-Naur Form (BNF). BNF uses three classes of symbols: non-terminal symbols (phrases) enclosed by brackets <>, terminal symbols (tokens) that stand for themselves, and the metasymbol ::= - is defined to be.
 
 As derivations are ambiguous, a more abstract structure is needed. Parse trees generalise derivations and provide structural information needed by the later stages of compilation.
+
+
+## Semantic Analysis
+
+Semantic analysis is the process of drawing meaning from text. It allows computers to understand and interpret sentences, paragraphs, or whole documents, by analyzing their grammatical structure, and identifying relationships between individual words in a particular context.
+
+It’s an essential sub-task of Natural Language Processing (NLP) and the driving force behind machine learning tools like chatbots, search engines, and text analysis.
+
+Semantic analysis-driven tools can help companies automatically extract meaningful information from unstructured data, such as emails, support tickets, and customer feedback. 
+
+Semantic analysis or context sensitive analysis is a process in compiler construction, usually after parsing, to gather necessary semantic information from the source code. It usually includes type checking, or makes sure a variable is declared before use which is impossible to describe in the extended Backus–Naur form and thus not easily detected during parsing.
