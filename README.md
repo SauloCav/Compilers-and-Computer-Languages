@@ -25,8 +25,6 @@ In syntactic analysis, parse trees are used to show the structure of the sentenc
 
 There are many techniques for parsing algorithms (vs FSA-centred lexical analysis), and the two main classes of algorithm are top-down and bottom-up parsing.
 
-Context-free grammars can be represented using Backus-Naur Form (BNF). BNF uses three classes of symbols: non-terminal symbols (phrases) enclosed by brackets <>, terminal symbols (tokens) that stand for themselves, and the metasymbol ::= - is defined to be.
-
 As derivations are ambiguous, a more abstract structure is needed. Parse trees generalise derivations and provide structural information needed by the later stages of compilation.
 
 
