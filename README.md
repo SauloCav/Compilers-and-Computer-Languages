@@ -1,7 +1,5 @@
 # Compilers and Computer Languages
 
-Some basic compilers activities
-
 ## Lexical Analysis
 
 Lexical analysis is the extraction of individual words or lexemes from an input stream of symbols and passing corresponding tokens back to the parser.
